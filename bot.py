@@ -66,11 +66,12 @@ def ask_gemini_sync(question: str) -> str:
         contents=question,
         config=types.GenerateContentConfig(
             system_instruction=(
-                "You are a helpful Discord bot. "
-                "Keep answers friendly, clear, and not too long. "
-                "Use Mongolian if the user asks in Mongolian."
-            ),
-            max_output_tokens=800,
+    "You are a helpful Discord AI bot. "
+    "Give detailed, useful answers. "
+    "When explaining, include steps, examples, and warnings if needed. "
+    "Use Mongolian if the user asks in Mongolian."
+),
+max_output_tokens=2000,
             temperature=0.7,
         ),
     )
